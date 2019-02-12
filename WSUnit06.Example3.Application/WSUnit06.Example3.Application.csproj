@@ -7,12 +7,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{408A3227-E55C-48F5-80B6-FADFE9825A44}</ProjectGuid>
+    <ProjectGuid>{4217A83B-F40F-4819-81EE-A15895FDA50D}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WSUnit06.Ecample3.Data</RootNamespace>
-    <AssemblyName>WSUnit06.Ecample3.Data</AssemblyName>
+    <RootNamespace>WSUnit06.Example3.Application</RootNamespace>
+    <AssemblyName>WSUnit06.Example3.Application</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -43,12 +43,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -73,21 +67,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="DataServices.asmx" />
+    <Content Include="ApplicationServices.asmx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAO\IStatisticsDAO.cs" />
-    <Compile Include="DAO\Impl\StatisticsDAO.cs" />
-    <Compile Include="DataContext.cs" />
-    <Compile Include="DAOFactory.cs" />
-    <Compile Include="DAO\IGenericDAO.cs" />
-    <Compile Include="DAO\Impl\GenericDAO.cs" />
-    <Compile Include="DataServices.asmx.cs">
-      <DependentUpon>DataServices.asmx</DependentUpon>
+    <Compile Include="ApplicationServices.asmx.cs">
+      <DependentUpon>ApplicationServices.asmx</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Model\Statistics.cs" />
+    <Compile Include="Model\Zone.cs" />
+    <Compile Include="Model\Product.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -100,7 +89,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -115,9 +104,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>50142</DevelopmentServerPort>
+          <DevelopmentServerPort>50599</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:9090/</IISUrl>
+          <IISUrl>http://localhost:50599/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
